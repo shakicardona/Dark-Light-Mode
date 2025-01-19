@@ -1,13 +1,21 @@
 import React from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
-import { useRouter } from 'expo-router';
+import { View, Text, StyleSheet } from 'react-native';
+import { useColorScheme } from 'react-native'; // Detect system theme
+import { lightTheme, darkTheme } from '../styles/theme.js'; // Import theme colors
+
 
 const HomeScreen = () => {
-  const router = useRouter();
+  const colorScheme = useColorScheme();
+  const theme = colorScheme === 'dark' ? darkTheme : lightTheme;
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home Screen</Text>
+      {
+        colorScheme === "dark" ?
+          <Text style={[styles.title, {color: theme.text}]}> 🌙 Dark Mode 🌙 </Text>
+        :
+          <Text style={[styles.title, {color: theme.text}]}> ☀️ Light Mode ☀️ </Text>
+      }
     </View>
   );
 };
