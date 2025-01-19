@@ -1,5 +1,5 @@
 # Dark/Light Mode Tutorial
-For a full explanation read the tutorial at [Medium]()
+For a full explanation read the tutorial at [Medium](https://medium.com/@mar.cardona.96/)
 
 ### Contributing
 Contributions are welcome! Feel free to submit issues or pull requests to enhance the project.
